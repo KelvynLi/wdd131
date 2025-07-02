@@ -1,0 +1,172 @@
+body {font-family: 'inter', sans-serif;
+line-height: 1.6;
+margin: 0;
+padding:0;
+background-color: #cfdaec;
+color: #333;}
+
+header{
+     background: linear-gradient(135deg#6a11cb 100%,#2575fc 100%)
+    ; 
+    padding: 1.5rem 0; 
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0,0.2); /*sombra na margem*/
+    border-bottom-left-radius: 15px; /* arredondar parte superior*/
+    border-bottom-right-radius: 15px;
+}
+
+
+head h1 {
+    margin: 0;
+    font-size: 2.8rem; /*tamanho para o titulo principal*/
+    letter-spacing: 1.5px;
+}
+
+nav ul {
+    padding: 0;
+    list-style: none; /*Remove os marcadores*/
+    margin-top: 15px; /*espaçamentos entreos itens*/
+
+}
+
+nav ul li {
+    display: inline-block; /*exibir os itens da lista em linha*/
+    margin: 0 15px; /*espaçamento entre os itens*/
+}
+
+nav a {
+    color: #0056b3; /*cor dos links*/
+    text-decoration: none; /*tirar sobrinhado*/
+    font-weight: bold;
+    padding: 8px 12px;
+    border-radius: 8px;
+    transition: blackground-color 0.3s ease;
+}
+
+nav a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+main {
+    padding: 20px;
+    display: flex ; /*usar flexbox para organizar o conteudo principal ea barra lateral*/
+    flex-wrap: wrap; /*permite que os itens quebre na proxima linha*/
+    max-width: 1200px ; /*largura maxima do conteudo*/
+    margin: 30px auto; /*centraliza o conteudo e adciona margem superior/inferioe*/
+    background-color: #fff; /*fundo Branco para o conteudo principal*/
+    box-shadow: 0 0 15px
+    rgba(0, 0, 0,0.1); /*Sombra suave*/
+    border-radius: 10px; /*cantos arredondados*/
+
+}
+
+article {
+    background: #ffffff;
+    border: 1px solid #e0e0e0; /*Borda clara*/
+    padding: 20px;
+    margin-bottom: 25px;
+    border-radius: 10px; /*canto arredondado para os artigos*/
+    box-shadow: 0 2px 5px rgba(0, 0, 0,0,0.5); /*sombra sutil para cada artigo*/
+}
+
+article h3 {
+    margin-top: 0;
+    color: #6a11cb;
+    font-size: 1.8rem;
+}
+
+article p.post-meta {
+    font-size: 0.85em;
+    color: #777;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #eee; /*Linha divisoria para a meta*/
+    padding-bottom: 10px;
+}
+
+article img {
+    max-width: 50%;
+    height: auto;
+    border-radius: 8px;
+    margin-top: 15px;
+    margin-left: 25% ;
+    
+}
+
+figcaption {
+    font-style: italic;
+    font-size: 0.9em;
+    color: #666;
+    text-align: center;
+    margin-top:  5px;
+}
+
+aside {
+    flex: 1; /*barra lateral sera ocupada por 1  espaço disponivel*/
+    min-width: 250px; /*largura minima para a barra lateral*/
+    padding-left: 25px; /*espaçamento a esquerda*/
+    border-left: 1px solid #e0e0e0; /*Borda divisoria*/
+}
+
+aside h3 {
+    color: #333;
+    font-size: 1.5rem;
+    margin-top: 0;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #eee ;
+}
+
+aside ul {
+    list-style: none;
+    padding: 0;
+
+}
+
+aside a {
+    color: #6a11cb; /*cor dos links na barra larteral*/
+    text-decoration: none;
+    transition: 0.3s ease;
+    
+}
+
+aside a :hover {
+    color: #6a11cb; /*cor dos links ao passar o mause*/
+}
+
+aside figure img {
+    border-radius: 50%; /*tornar a imagem redonda*/
+    width: 100px; /*defina um tamanho fixo para a imagem de perfil*/
+    height: 100px;
+    object-fit: cover; /*garante que a imagem preencha o espaço sem distorcer*/
+    margin: 10px auto; /*centraliza a imagem se o figure for display: block*/
+    display: block; /*garante que a margin auto funcione*/
+    border: 3px solid #2575fc; /*borda colorida*/
+    box-shadow: 0 0 8px rgba(0, 0, 0,0.1);
+
+}
+ aside h1  {margin: 0;
+    font-size: 1.8rem; /*tamanho para o titulo principal*/
+    letter-spacing: 1.5px;
+}
+
+footer { background: #333;
+color: #fff;/*cor do texto no rodape*/
+text-align: center;
+padding: 1.5rem 0;
+border-top-left-radius: 15px; /*cantos arredondados na parte superior*/
+border-bottom-right-radius: 15px;
+} 
+
+@media (max-width: 768px;) {main{flex-direction: column; /*empilha o conteudo principal e a barra lateral verticalmente*/}
+aside{padding-left:0;
+border-left: none;
+border-top: 1px solid #0e0e0e;/*adiciona uma borda superior para separação*/
+padding-top: 25px;}
+ header h1 {
+    font-size: 2rem /*reduz o tamanho do titulo em telas menores*/
+ }
+ nav ul li {
+    display: block; /* links de navegação em bloco para melhor toque*/
+    margin: 10px 0;
+ }
+
+}
