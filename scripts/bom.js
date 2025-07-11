@@ -14,7 +14,7 @@
       function addItem() {
         const itemText = input.value.trim();
         if (itemText === '') {
-          alert('Please enter an item.');
+          alert('Please enter an chapter.');
           return;
         }
 
