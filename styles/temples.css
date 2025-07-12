@@ -1,0 +1,85 @@
+
+@media (max-width: 768px) {
+    header {
+        flex-wrap: wrap; /* faz com que o botão não passe pra outra linha */
+        padding: 10px 15px; /*padding para telas menores */
+    }
+
+    header h1 {
+        font-size: 1.5rem; /* Titulo mais pequeno */
+        flex-grow: 1;
+        text-align: left;
+    }
+
+    /* o botão hamburguer */
+    .hamButton {
+        display: flex; /* ele sobrescreve o botão hamburguer mas o no html o arquivo temple.css 
+        tem que carregar primeiro portanto ele tem que ficar primeiro */
+        background-color: transparent; /* Fundo transparente */
+        
+    }
+
+    /* Esconde a navegação padrão em telas pequenas */
+    .main-nav {
+        display: none; /* Esconde o menu por padrão */
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: rgba(130, 3, 234, 0.95);
+        box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+        z-index: 999;
+        flex-direction: column; /* Faz os links ficarem em coluna */
+        padding: 0;
+    }
+
+    .main-nav.active {
+        display: flex; /* Mostra o menu quando ativo */
+    }
+
+    /* Estilos para os links dentro do menu hambúrguer */
+    .main-nav ul {
+        flex-direction: column;
+        width: 100%;
+        gap: 0; /* Remove o gap entre os itens da lista */
+    }
+
+    .main-nav ul li {
+        width: 100%;
+        text-align: center;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .main-nav ul li:last-child {
+        border-bottom: none;
+    }
+
+    .main-nav ul li a {
+        display: block;
+        padding: 15px 20px;
+        font-size: 1.2rem;
+        
+    }
+
+    /* Animação do ícone do hambúrguer */
+    .hamButton.active .bar:nth-child(1) {
+        transform: translateY(11px) rotate(45deg);
+    }
+    .hamButton.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+    .hamButton.active .bar:nth-child(3) {
+        transform: translateY(-11px) rotate(-45deg);
+    }
+
+    
+    main {
+        grid-template-columns: 1fr; 
+        padding: 10px;
+        margin-top: 10px; 
+
+    footer {
+        font-size: 0.9rem; 
+        padding: 15px;
+    }
+}
