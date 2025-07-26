@@ -143,12 +143,9 @@ const displayTemples = (templeList) => {
 
 // Main execution block
 document.addEventListener('DOMContentLoaded', () => {
-  ]
     // --- Hamburger Menu and Footer Logic ---
-const menuToggle = document.getElementById('menu');
-
+    const menuToggle = document.getElementById('menu');
     const mainNav = document.getElementById('main-nav');
-
     if (menuToggle && mainNav) {
         menuToggle.addEventListener('click', () => {
             mainNav.classList.toggle('active');
