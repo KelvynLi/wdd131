@@ -1,0 +1,208 @@
+@import url('https://fonts.googleapis.com/css2?family=Libertinus+Mono&family=Oswald:wght@200..700&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    background-color: #ffffff;
+    color: #2D2D2D;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    background-color: #0B9444; /* Green from siteplan */
+    color: #FFFFFF;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+header h1 {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+}
+
+
+.about {
+  position: absolute;
+  z-index: 2; /* garante que fique acima do slider */
+  text-align: center;
+  color: #FFFFFF;
+  /* Centraliza o texto perfeitamente no meio do slider */
+  top: 20%;
+  left: 25%;
+  transform: translate(-50%, -50%);
+  width: 90%; /* Evita que o texto toque nas bordas */
+  max-width: 900px; /* Limita a largura em telas muito grandes */
+}
+
+/* Estilo para o título dentro da seção 'about' */
+.about h2 {
+    font-size: 3.5rem; /* Tamanho da fonte bem maior */
+    font-family: 'Montserrat', sans-serif;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7); /* Sombra mais forte para legibilidade */
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 1rem 0 0 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #FFFFFF;
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+    transition: background-color 0.3s;
+}
+
+nav a:hover {
+    background-color: #087335; /* Darker green */
+    border-radius: 5px;
+}
+
+main {
+    flex: 1;
+    /* padding: 1rem; */ /* Removido para permitir que o slider ocupe a largura total */
+}
+
+/* --- Slider Styles --- */
+.slider-container {
+    position: relative;
+    width: 100%;
+    margin: 0;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    z-index: 1;
+  overflow: hidden; /* ou visível, dependendo do efeito desejado */
+  
+
+}
+
+.slides {
+    display: flex;
+    transition: transform 0.7s ease-in-out;
+}
+
+.slide {
+    min-width: 100%;
+    box-sizing: border-box;
+    position: relative; /* Essencial para posicionar a legenda dentro do slide */
+}
+
+.slide img {
+    width: 100%;
+    display: block;
+    height: auto;
+}
+
+/* --- Estilos da Legenda (Caption) --- */
+.slide-caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.65); /* Fundo preto semi-transparente */
+    color: #FFFFFF;
+    padding: 20px;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.2rem;
+    opacity: 0; /* Começa invisível */
+    transform: translateY(20px); /* Começa um pouco para baixo */
+    transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.slider-container:hover .slide-caption {
+    opacity: 1; /* Fica visível ao passar o mouse no carrossel */
+    transform: translateY(0); /* Move para a posição final */
+}
+
+/* Next & previous buttons */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -25px;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    background-color: rgba(0,0,0,0.4);
+    border: none;
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.7);
+}
+
+/* --- Seção de Veículos em Destaque --- */
+.other {
+    display: flex;
+    justify-content: center; /* Centraliza os cards */
+    gap: 2rem; /* Espaço entre os cards */
+    padding: 2rem 1rem; /* Espaçamento interno da seção */
+    flex-wrap: wrap; /* Permite que os cards quebrem a linha em telas menores */
+    max-width: 1200px;
+    margin: 2rem auto; /* Centraliza a seção na página */    
+}
+
+/* Estilo comum para os cards de preço */
+.prices {
+    background-color: #f9f9f9;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 300px; /* Garante que os cards cresçam e se ajustem, com uma base de 300px */
+    max-width: 450px; /* Largura máxima de cada card */
+    transition: transform 0.3s ease;
+}
+
+.prices:hover {
+    transform: translateY(-5px); /* Efeito de "levantar" ao passar o mouse */
+}
+
+.prices img {
+    width: 100%; /* CORREÇÃO: A imagem agora ocupa toda a largura do card */
+    height: 250px; /* Altura fixa para as imagens */
+    object-fit: cover; /* Garante que a imagem cubra o espaço sem distorcer */
+}
+
+.prices figcaption {
+    padding: 1.5rem;
+    flex-grow: 1; /* Faz a área de texto crescer para preencher o espaço, igualando a altura dos cards */
+}
+
+.prices h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.4rem;
+    color: #0B9444;
+    margin: 0 0 0.5rem 0;
+}
+
+footer {
+    background-color: #2D2D2D;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+    margin-top: auto;
+}

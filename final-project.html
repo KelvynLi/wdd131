@@ -1,34 +1,66 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>dealership of electrics vehicle</title>
+    <title>EcoDrive Motors</title>
     <meta name="description" content="dealership specializing in electric and hybrid vehicles in Brazil">
     <meta name="author" content="Kelvyn S. Lima">
-
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/final-project.css">
+    <script src="scripts/final-project.js" defer></script>
 </head>
 <body>
     <header>
         <h1>EcoDrive Motors</h1>
         <nav>
             <ul>
-                <li><a href="/">Home</a></li></a>
+                <li><a href="#">Home</a></li>
                 <li><a href="/">Cars</a></li>
-                <li><a href="/">Services</a></li>
-                <li><a href="/">Conta</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Contato</a></li>
             </ul>
         </nav>
-</a>
-</a>
-
     </header>
     <main>
-        <div>
-            
+        <div class="slider-container">
+            <section class="about">
+                <h2>Have the best experience with our vehicles</h2>
+            </section>
+            <div class="slides">
+                <div class="slide">
+                </div>
+            </div>
+            <button class="prev">&#10094;</button>
+            <button class="next">&#10095;</button>
         </div>
+        <section class="other">
+            <article class="prices">
+                <picture>
+                    <img src="https://www.byd.com/content/dam/byd-site/us/product/han-ev/img/s9-car-1.png" loading="lazy" alt="BYD HAN">
+                    <figcaption>
+                        <h2>BYD HAN Flagship</h2>
+                        <p>Tração integral (AWD) com sistema de condução inteligente BYD. A partir de R$540.000.</p>
+                    </figcaption>
+                </picture>
+            </article>
+            
+            <article class="prices">
+                <picture>
+                    <img src="https://www2.mercedes-benz.com.br/content/dam/hq/passengercars/cars/eqs/mercedes-amg/exterior-design/02-2022/mercedes-amg-eqs-v297-design-exterior-2730x1536-02-2022.jpg/1740015294266.jpg?im=Crop,rect=(341,0,2048,1536);Resize=(512,384)" loading="lazy" alt="Mercedes-AMG EQS">
+                    <figcaption>
+                        <h2>Mercedes-AMG EQS 53</h2>
+                        <p>Design "One-Bow", painel Black Panel e MBUX Hyperscreen com materiais de alta qualidade.</p>
+                    </figcaption>
+                </picture>
+            </article>
+        </section>
     </main>
-    
-    
+    <footer>
+        <p>&copy; <span id="currentyear"></span> EcoDrive Motors. Todos os direitos reservados.</p>
+        <p>Última modificação: <span id="lastmodified"></span></p>
+    </footer>
 </body>
 </html>
