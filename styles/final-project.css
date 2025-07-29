@@ -34,7 +34,7 @@ header h1 {
   top: 20%;
   left: 30%;
   transform: translate(-50%, -50%);
-  width: 90%; /* Evita que o texto toque nas bordas */
+  width: 70%; /* Evita que o texto toque nas bordas */
   max-width: 900px; /* Limita a largura em telas muito grandes */
 }
 
