@@ -32,7 +32,7 @@ header h1 {
   color: #FFFFFF;
   /* Centraliza o texto perfeitamente no meio do slider */
   top: 20%;
-  left: 25%;
+  left: 30%;
   transform: translate(-50%, -50%);
   width: 90%; /* Evita que o texto toque nas bordas */
   max-width: 900px; /* Limita a largura em telas muito grandes */
