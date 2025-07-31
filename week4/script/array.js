@@ -1,11 +1,11 @@
-let names = ['Nancy','Blessing','Jorge','Svetlana','Bob'];
-function bfilternames(name) {
-  return name.startsWith('B');
-} 
-console.log(names.filter(bfilternames));
-
-namesLengthnames[5, 8, 5, 8, 3]
-function namesLength(name) { 
-  return name.length;
+// Uma função que recebe dois números e uma função de callback
+function calculate(a, b, callback) {
+  const sum = a + b;
+  // Executa a função de callback, passando a soma como argumento
+  callback(sum);
 }
-console.log(names.map(namesLength));
+
+// A função que será usada como callback para mostrar o resultado
+function displayResult(result) {
+  console.log('O resultado é: ' + result);
+} 
