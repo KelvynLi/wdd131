@@ -17,11 +17,35 @@ header {
     display: flex;
     justify-content: space-around;
     align-items: center;
+    position: relative; /* Necessário para o posicionamento do botão hambúrguer */
 }
 
 header h1 {
     font-family: 'Montserrat', sans-serif;
     margin: 0;
+}
+
+/* Botão Hambúrguer (escondido por padrão em telas grandes) */
+.hamButton {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    width: 30px;
+    height: 25px;
+    flex-direction: column;
+    justify-content: space-around;
+    z-index: 1001;
+}
+
+.hamButton .bar {
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: white;
+    border-radius: 2px;
+    transition: all 0.3s ease;
 }
 
 
@@ -30,10 +54,10 @@ header h1 {
   z-index: 2; /* garante que fique acima do slider */
   text-align: center;
   color: #FFFFFF;
-  /* Centraliza o texto perfeitamente no meio do slider */
+  /* Centraliza o texto no slider */
   top: 20%;
-  left: 33%;
-  transform: translate(-50%, -50%);
+  left: 35%;
+  transform: translate(-50%, -50%); /* Centraliza horizontal e verticalmente a partir do ponto top/left */
   width: 70%; /* Evita que o texto toque nas bordas */
   max-width: 900px; /* Limita a largura em telas muito grandes */
 }
@@ -42,7 +66,8 @@ header h1 {
 .about h2 {
     font-size: 3.5rem; /* Tamanho da fonte bem maior */
     font-family: 'Montserrat', sans-serif;
-    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7); /* Sombra mais forte para legibilidade */
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+    /* Sombra mais forte para legibilidade */
 }
 
 nav ul {
@@ -205,4 +230,171 @@ footer {
     text-align: center;
     padding: 1rem;
     margin-top: auto;
+}
+
+
+/* Estilo para o link do WhatsApp flutuante */
+.whatsapp-float {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+    text-decoration: none;
+    color: #fff;
+    cursor: pointer;
+}
+
+/* Container principal do ícone e texto */
+.icon-container {
+    display: flex;
+    align-items: center;
+    background-color: #25D366; /* Cor verde do WhatsApp */
+    border-radius: 50px;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: all 0.4s ease; /* Transição suave para todas as propriedades */
+    overflow: hidden; /* Esconde o texto que está fora do container */
+    width: 60px; /* Largura inicial, apenas para o ícone */
+}
+
+/* Ícone do WhatsApp */
+.icon-container i {
+    font-size: 30px;
+    min-width: 40px; /* Garante que o ícone tenha um tamanho mínimo */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Container do texto */
+.text-container {
+    white-space: nowrap; /* Impede que o texto quebre a linha */
+    opacity: 0; /* Esconde o texto por padrão */
+    max-width: 0; /* Largura inicial do texto é zero */
+    margin-left: 0;
+    transition: all 0.4s ease;
+}
+
+/* Efeito ao passar o mouse sobre o container */
+.whatsapp-float:hover .icon-container {
+    width: auto; /* A largura se expande para acomodar o conteúdo */
+    padding: 10px 20px;
+}
+
+/* Efeito ao passar o mouse sobre o texto */
+.whatsapp-float:hover .text-container {
+    opacity: 1; /* Torna o texto visível */
+    max-width: 200px; /* Defina uma largura máxima para o texto */
+    margin-left: 10px; /* Adiciona um espaço entre o ícone e o texto */
+}
+
+/* --- Media Queries para Responsividade --- */
+
+@media (max-width: 768px) {
+    header {
+        justify-content: space-between; /* Alinha título à esquerda e botão à direita */
+        padding: 1rem 1.5rem;
+    }
+
+
+    .hamButton {
+        display: flex; /* Mostra o botão hambúrguer */
+    }
+
+    /* Animação do ícone do hambúrguer para virar um 'X' */
+    .hamButton.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+    .hamButton.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+    .hamButton.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    nav {
+        display: none; /* Esconde o menu por padrão */
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: rgba(11, 148, 68, 0.97); /* Verde do siteplan com transparência */
+        box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+        z-index: 1000;
+    }
+
+    /* A classe .active será adicionada via JavaScript */
+    nav.active {
+        display: block;
+    }
+
+    nav ul {
+        flex-direction: column;
+        width: 100%;
+        gap: 0;
+        margin: 0;
+    }
+
+    nav ul li {
+        width: 100%;
+        text-align: center;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    nav ul li:last-child {
+        border-bottom: none;
+    }
+
+    nav a {
+        display: block;
+        padding: 1rem;
+    }
+
+    .about {
+        top: 25%;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 90%;
+        background-color: transparent;
+    }
+
+    .about h2 {
+        font-size: 2.2rem;
+        display: none;
+    }
+
+    .prev, .next {
+        padding: 10px;
+        font-size: 16px;
+        margin-top: -22px;
+    }
+
+    .slide-caption {
+        font-size: 1rem;
+        padding: 15px;
+        /* Força a legenda a aparecer em toque, já que não há hover */
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    .slider-container:hover .slide-caption {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    .other {
+        padding: 2rem 1rem;
+        gap: 1.5rem;
+    }
+
+    .prices {
+        flex: 1 1 100%; /* Cada card ocupa a largura total */
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .about h2 {
+        font-size: 1.8rem;
+    }
 }

@@ -1,6 +1,19 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // --- Lista de Imagens da Internet ---
-    // Você pode adicionar, remover ou trocar os links aqui para mudar as imagens do carrossel.
+    // --- Menu Hambúrguer ---
+    const hamButton = document.querySelector('.hamButton');
+    const navigation = document.querySelector('nav');
+
+    // Garante que os elementos existem antes de adicionar o evento
+    if (hamButton && navigation) {
+        hamButton.addEventListener('click', () => {
+            // Alterna a classe 'active' na navegação para mostrar/esconder o menu
+            navigation.classList.toggle('active');
+            // Alterna a classe 'active' no botão para animar o ícone (de hambúrguer para 'X')
+            hamButton.classList.toggle('active');
+        });
+    }
+
+   
     const carImages = [
         {
             imageUrl: "https://www.byd.com/content/dam/byd-site/us/home/kv-banner/han-blue-pc-new.jpg",
@@ -75,11 +88,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // --- Lógica do Rodapé ---
     document.getElementById('currentyear').textContent = new Date().getFullYear();
-    document.getElementById('lastmodified').textContent = `Última modificação: ${document.lastModified}`;
+    document.getElementById('lastmodified').textContent = document.lastModified;
 
     // --- Execução Principal ---
     createSlides();      // Primeiro, cria os slides com as imagens
     initializeSlider();  // Depois, inicia a animação do carrossel
 
-    
+
 });

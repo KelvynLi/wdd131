@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Form</title>
+  <meta name="description" content="A form of product">
+  <meta name="author" content="Kelvyn S. Lima">
+  <link rel="stylesheet" href="./styles/form.css">
+  <script src="./scripts/form.js"></script>
+</head>
+<body>
+    <div class="container">
+      <!-- A tag <form> deve envolver todos os campos que você quer enviar -->
+      <form action="get" method="post">
+        <fieldset class="main-review">
+            <legend id="main-legend">Product Review</legend>
+            
+            <!-- Campo para selecionar o produto -->
+            <select id="productName" name="productName" required>
+                <option value="" disabled selected>Please select ...</option>
+                <option value="steering wheel">Steering Wheel</option>
+                <option value="brake">Brake</option>
+                <option value="clutch pedal">Clutch Pedal</option>
+                <option value="accelerator">Accelerator</option>
+                <option value="speedometer">Speedometer</option>
+            </select>
+
+            <!-- Grupo de botões de rádio para o nível do usuário -->
+            <div class="radio-group">
+              <p>Overall Rating:</p>
+              <label><input type="radio" name="rating" value="1" required> ⭐</label>
+              <label><input type="radio" name="rating" value="2"> ⭐⭐</label>
+              <label><input type="radio" name="rating" value="3"> ⭐⭐⭐</label>
+              <label><input type="radio" name="rating" value="4"> ⭐⭐⭐⭐</label>
+              <label><input type="radio" name="rating" value="5"> ⭐⭐⭐⭐⭐</label>
+            </div>
+
+            
+            <div>
+                <label for="installationDate">Date of Installation:</label>
+                <input type="date" id="installationDate" name="installation_date" required>
+            </div>
+
+            <!-- Grupo de checkboxes com <fieldset> para melhor semântica e acessibilidade -->
+            <fieldset>
+                <legend>Which features did you find useful in the product?</legend>
+                <p class="instructions">(Check all that apply)</p>
+                <label><input type="checkbox" name="feature_durability" value="yes"> Durability</label>
+                <label><input type="checkbox" name="feature_ease_of_use" value="yes"> Ease of Use</label>
+                <label><input type="checkbox" name="feature_performance" value="yes"> Performance</label>
+                <label><input type="checkbox" name="feature_design" value="yes"> Design</label>
+            </fieldset>
+
+            <!-- Campo de texto para a avaliação escrita (opcional) -->
+            <div>
+                <label for="writtenReview">Written Review (Optional)</label>
+                <textarea id="writtenReview" name="written_review" rows="4" cols="50"></textarea>
+            </div>
+
+            <!-- Campo para o nome do usuário (opcional) -->
+            <div>
+                <label for="userName">Your Name (Optional)</label>
+                <input type="text" id="userName" name="user_name">
+            </div>
+
+            <button type="submit">Post Review</button>
+        </fieldset> 
+        </fieldset>
+    </div>
+            </div>
+</html>

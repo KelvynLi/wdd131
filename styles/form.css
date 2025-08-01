@@ -1,0 +1,104 @@
+/* --- Configurações Globais e Fontes --- */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f9f4f8;
+    margin: 0;
+    padding: 1rem;
+}
+
+/* --- Container Principal --- */
+.container {
+    background-color:#d5d0d0;
+    max-width: 600px;
+    margin: 2rem auto;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* --- Estilos do Formulário --- */
+form {
+    width: 100%;
+}
+
+.radio-group label {
+    display: inline-block;
+    margin-right: 0.5rem;
+}
+
+
+
+.main-review {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem; /* Este é o "espaçamento bacana" entre cada campo */
+    border: none;
+    padding: 0;
+}
+
+#main-legend {
+    background-color: purple; /* Verde do seu siteplan */
+    color: white;
+    padding: 8px 15px;
+    border-radius: 5px;
+    width: 100%;
+    text-align: center;
+    font-size: 1.2rem;
+    box-sizing: border-box; /* Garante que o padding não aumente a largura */
+}
+
+/* --- Estilos para os Campos (Inputs, Select, Textarea) --- */
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="date"],
+select,
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+fieldset {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 1rem;
+}
+
+legend {
+    font-weight: bold;
+    padding: 0 0.5rem;
+}
+
+.instructions {
+    font-size: 0.8rem;
+    font-style: italic;
+    color: #666;
+    margin-top: -0.5rem;
+    margin-bottom: 1rem;
+}
+
+button[type="submit"] {
+    background-color: #0B9444;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 1.1rem;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #087335;
+}
