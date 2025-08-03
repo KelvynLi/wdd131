@@ -44,14 +44,20 @@ function populateProductOptions() {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
+   
+    const REVIEW_COUNT_KEY = 'review-count';
+
     populateProductOptions();
 
-    
     const reviewForm = document.querySelector('form');
     if (reviewForm) {
-        reviewForm.addEventListener('submit', () => {
-            let reviewCount = Number(window.localStorage.getItem('review-count')) || 0;
-            window.localStorage.setItem('review-count', reviewCount + 1);
-        });
+        reviewForm.addEventListener('submit', (event) => {
+            
+            event.preventDefault(); 
+
+            let reviewCount = Number(window.localStorage.getItem(REVIEW_COUNT_KEY)) || 0;
+            window.localStorage.setItem(REVIEW_COUNT_KEY, reviewCount + 1);
+
+            
     }
 });
