@@ -115,6 +115,20 @@ main {
     flex-grow: 1; /* Faz a área de texto crescer para preencher o espaço, igualando a altura dos cards */
 }
 
+.prices figure {
+    margin: 0; /* Remove a margem padrão do figure para não quebrar o layout */
+    display: flex;
+    flex-direction: column;
+    height: 100%; /* Garante que o figure ocupe toda a altura do card */
+}
+
+.prices figure {
+    margin: 0; /* Remove a margem padrão do figure para não quebrar o layout */
+    display: flex;
+    flex-direction: column;
+    height: 100%; /* Garante que o figure ocupe toda a altura do card */
+}
+
 .prices h2 {
     font-family: 'Montserrat', sans-serif;
     font-size: 1.4rem;
