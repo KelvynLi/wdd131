@@ -15,7 +15,7 @@ header {
     color: #FFFFFF;
     padding: 1rem;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     position: relative; /* Necessário para o posicionamento do botão hambúrguer */
 }
@@ -23,6 +23,43 @@ header {
 header h1 {
     font-family: 'Montserrat', sans-serif;
     margin: 0;
+    font-size: 1.5rem; /* Ajuste para um bom equilíbrio com o logo */
+}
+
+.Explore {
+    position: absolute;
+  z-index: 2; /* garante que fique acima do slider */
+  text-align: center;
+  top: 55%; /* Posição abaixo do título */
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+}
+
+.Explore a.bt {
+    display: inline-block;
+    background-color: transparent; /* Verde do cabeçalho */
+    color: #FFFFFF;
+    padding: 12px 30px;
+    border-radius: 50px; /* Formato de pílula */
+    text-decoration: none;
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    border: 2px solid #FFFFFF;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+.Explore a.bt:hover {
+    background-color: transparent; /* Verde mais escuro */
+    transform: scale(1.05); /* Leve aumento no tamanho */
+}
+
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 15px; /* Espaço entre o logo e o título */
 }
 
 /* Botão Hambúrguer (escondido por padrão em telas grandes) */
@@ -55,11 +92,11 @@ header h1 {
   text-align: center;
   color: #FFFFFF;
   /* Centraliza o texto no slider */
-  top: 20%;
-  left: 35%;
+  top: 20%; /* Ajustado para dar espaço ao botão */
+  left: 35%; /* Corrigido para centralização correta */
   transform: translate(-50%, -50%); /* Centraliza horizontal e verticalmente a partir do ponto top/left */
-  width: 70%; /* Evita que o texto toque nas bordas */
-  max-width: 900px; /* Limita a largura em telas muito grandes */
+  width: 80%; /* Evita que o texto toque nas bordas */
+  max-width: 1000px; /* Limita a largura em telas muito grandes */
 }
 
 /* Estilo para o título dentro da seção 'about' */
@@ -69,7 +106,6 @@ header h1 {
     text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
     /* Sombra mais forte para legibilidade */
 }
-
 nav ul {
     list-style-type: none;
     padding: 0;
@@ -287,6 +323,50 @@ footer {
     max-width: 200px; /* Defina uma largura máxima para o texto */
     margin-left: 10px; /* Adiciona um espaço entre o ícone e o texto */
 }
+
+    .feedback-section {
+      background-color: #f4f4f4;
+      padding: 40px 20px;
+    }
+    .feedback-section h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .feedback-section form {
+      max-width: 600px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+    .form-group {
+      display: flex;
+      flex-direction: column;
+    }
+    .form-group label {
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-family: 'Roboto', sans-serif;
+    }
+
+    .submit-btn {
+      background-color: #0B9444; /* Verde do seu siteplan */
+      color: white;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+      font-family: 'Montserrat', sans-serif;
+      transition: background-color 0.3s;
+    }
 
 /* --- Media Queries para Responsividade --- */
 

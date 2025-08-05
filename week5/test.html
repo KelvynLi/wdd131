@@ -50,6 +50,48 @@
       text-align: center;
       padding: 20px;
     }
+    .feedback-section {
+      background-color: #f4f4f4;
+      padding: 40px 20px;
+    }
+    .feedback-section h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .feedback-section form {
+      max-width: 600px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+    .form-group {
+      display: flex;
+      flex-direction: column;
+    }
+    .form-group label {
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-family: 'Roboto', sans-serif;
+    }
+    .submit-btn {
+      background-color: #0B9444; /* Verde do seu siteplan */
+      color: white;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+      font-family: 'Montserrat', sans-serif;
+      transition: background-color 0.3s;
+    }
   </style>
 </head>
 <body>
@@ -78,6 +120,36 @@
         <p>Compacto e eficiente para o dia a dia urbano.</p>
       </div>
     </div>
+  </section>
+
+  <section class="feedback-section">
+    <h2>Avalie Nosso Atendimento</h2>
+    <form action="#" method="post">
+      <div class="form-group">
+        <label for="name">Nome:</label>
+        <input type="text" id="name" name="name" required>
+      </div>
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+      <div class="form-group">
+        <label for="rating">Sua Nota:</label>
+        <select id="rating" name="rating" required>
+          <option value="" disabled selected>Selecione de 1 a 5 estrelas</option>
+          <option value="5">⭐⭐⭐⭐⭐</option>
+          <option value="4">⭐⭐⭐⭐</option>
+          <option value="3">⭐⭐⭐</option>
+          <option value="2">⭐⭐</option>
+          <option value="1">⭐</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="comments">Comentários:</label>
+        <textarea id="comments" name="comments" rows="4"></textarea>
+      </div>
+      <button type="submit" class="submit-btn">Enviar Avaliação</button>
+    </form>
   </section>
 
   <footer>

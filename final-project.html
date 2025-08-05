@@ -16,7 +16,13 @@
 </head>
 <body>
     <header>
-        <h1>EcoDrive Motors</h1>
+        <div class="logo-container">
+            <svg width="70" height="50" viewBox="0 0 200 100" xmlns="http://www.w3.org/2000/svg">
+                <ellipse cx="100" cy="50" rx="45" ry="35" fill="transparent" stroke="white" stroke-width="8"/>
+                <text x="70" y="60" font-family="Arial, sans-serif" font-size="36" fill="white" font-weight="bold">ED</text>
+            </svg>
+            <h1>EcoDrive Motors</h1>
+        </div>
         <button class="hamButton" aria-label="Menu">
             <span class="bar"></span>
             <span class="bar"></span>
@@ -24,9 +30,9 @@
         </button>
         <nav> <!-- O JavaScript vai adicionar a classe 'active' aqui -->
             <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="/">Cars</a></li>
-                <li><a href="#">Services</a></li>
+                <li><a href="./final-project.html">Home</a></li>
+                <li><a href="./cars-catalog.html">Cars</a></li>
+                <li><a href="./troca.html">Services</a></li>
                 <li><a href="#">Contato</a></li>
             </ul>
         </nav>
@@ -34,8 +40,13 @@
     <main>
         <div class="slider-container">
             <section class="about">
-                <h2>Have the best experience with our vehicles</h2>
+                <h2>The best vehicles</h2>
             </section>
+
+            <div class="Explore">
+                <a class="bt" href="./cars-catalog.html" data-ga-el="kv banner component" data-ga-ec="Explore more">Explore more</a>
+            </div>
+
             <div class="slides">
                 <div class="slide">
                 </div>
@@ -66,12 +77,43 @@
         </section>
 
         <a href="https://api.whatsapp.com/send?phone=5511999999999&text=Olá! Gostaria de falar com a Ram." target="_blank" class="whatsapp-float">
-        <div class="icon-container">
+          <div class="icon-container">
             <i class="fab fa-whatsapp"></i>
             <span class="text-container">Speak with EcoDrive Motors</span>
-        </div>
+          </div>
         </a>
     </main>
+
+    <section class="feedback-section">
+    <h2>Evaluate our service</h2>
+    <form action="#" method="get">
+      <div class="form-group">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+      </div>
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+      <div class="form-group">
+        <label for="rating">Your Grade</label>
+        <select id="rating" name="rating" required>
+          <option value="" disabled selected>Select stars</option>
+          <option value="5">⭐⭐⭐⭐⭐</option>
+          <option value="4">⭐⭐⭐⭐</option>
+          <option value="3">⭐⭐⭐</option>
+          <option value="2">⭐⭐</option>
+          <option value="1">⭐</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="comments">comments:</label>
+        <textarea id="comments" name="comments" rows="4"></textarea>
+      </div>
+      <button type="submit" class="submit-btn">Send Feedback</button>
+    </form>
+  </section>
+
     <footer>
         <p>&copy; <span id="currentyear"></span> EcoDrive Motors. Todos os direitos reservados.</p>
         <p>Última modificação: <span id="lastmodified"></span></p>

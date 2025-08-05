@@ -1,4 +1,4 @@
-// Data for the temples
+  // Data for the temples
 const temples = [
   {
     templeName: "Aba Nigeria",
