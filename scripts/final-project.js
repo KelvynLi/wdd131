@@ -38,7 +38,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const slidesContainer = document.querySelector('.slides');
         if (!slidesContainer) return;
 
-        slidesContainer.innerHTML = ''; // Limpa qualquer conteúdo que já exista
+        slidesContainer.innerHTML = ''; 
 
         carImages.forEach(image => {
             const slideDiv = document.createElement('div');
@@ -91,8 +91,23 @@ document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('lastmodified').textContent = document.lastModified;
 
     // --- Execução Principal ---
-    createSlides();      // Primeiro, cria os slides com as imagens
-    initializeSlider();  // Depois, inicia a animação do carrossel
+    createSlides();      
+    initializeSlider();  
 
+    // --- Lógica do Formulário de Feedback ---
+    const form = document.querySelector('form');
+    if (form) {
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const name = form.name.value;
+            const rating = form.rating.value;
+            const comments = form.comments.value;
 
+            const feedback = { name, rating, comments };
+            localStorage.setItem('userFeedback', JSON.stringify(feedback));
+
+            alert('Thank you for your feedback!'); // Informa o usuário
+            form.reset(); // Limpa o formulário
+        });
+    }
 });

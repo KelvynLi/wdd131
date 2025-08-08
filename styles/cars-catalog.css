@@ -9,28 +9,26 @@ body {
 }
 
 header {
-    background-color: #0B9444; /* Green from siteplan */
+    background-color: #0B9444; 
     color: #FFFFFF;
     padding: 1rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    position: relative; /* Necessário para o posicionamento do botão hambúrguer */
+    position: relative; 
 }
 
 .logo-container {
     display: flex;
     align-items: center;
-    gap: 15px; /* Espaço entre o logo e o título */
+    gap: 15px;
 }
 
 
 header h1 {
     font-family: 'Montserrat', sans-serif;
     margin: 0;
-    font-size: 1.5rem; /* Ajuste para um bom equilíbrio com o logo */
-}
-
+    font-size: 1.5rem; 
 nav ul {
     list-style-type: none;
     padding: 0;
@@ -49,7 +47,7 @@ nav a {
 }
 
 nav a:hover {
-    background-color: #087335; /* Darker green */
+    background-color: #087335;
     border-radius: 5px;
 }
 
@@ -77,16 +75,15 @@ nav a:hover {
 
 main {
     display: flex;
-    justify-content: center; /* Centraliza os cards */
-    gap: 2rem; /* Espaço entre os cards */
-    padding: 2rem 1rem; /* Espaçamento interno da seção */
-    flex-wrap: wrap; /* Permite que os cards quebrem a linha em telas menores */
-    max-width: 1500px; /* Acomoda ~3 cards de 450px + espaçamento */
-    margin: 2rem auto; /* Centraliza a seção na página */
-}
+    justify-content: center; 
+    gap: 2rem; 
+    padding: 2rem 1rem; 
+    flex-wrap: wrap; 
+    max-width: 1500px; 
+    margin: 2rem auto; 
 
 
-/* Estilo comum para os cards de preço */
+
 .prices {
     background-color: #f9f9f9;
     border: 1px solid #e0e0e0;
@@ -95,38 +92,38 @@ main {
     overflow: hidden;
     display: flex;
     flex-direction: column;
-    flex: 1 1 300px; /* Garante que os cards cresçam e se ajustem, com uma base de 300px */
-    max-width: 450px; /* Largura máxima de cada card */
+    flex: 1 1 300px; 
+    max-width: 450px; 
     transition: transform 0.3s ease;
 }
 
 .prices:hover {
-    transform: translateY(-5px); /* Efeito de "levantar" ao passar o mouse */
+    transform: translateY(-5px); 
 }
 
 .prices img {
-    width: 100%; /* CORREÇÃO: A imagem agora ocupa toda a largura do card */
-    height: 250px; /* Altura fixa para as imagens */
-    object-fit: cover; /* Garante que a imagem cubra o espaço sem distorcer */
+    width: 100%; 
+    height: 250px; 
+    object-fit: cover; 
 }
 
 .prices figcaption {
     padding: 1.5rem;
-    flex-grow: 1; /* Faz a área de texto crescer para preencher o espaço, igualando a altura dos cards */
+    flex-grow: 1; 
 }
 
 .prices figure {
-    margin: 0; /* Remove a margem padrão do figure para não quebrar o layout */
+    margin: 0; 
     display: flex;
     flex-direction: column;
-    height: 100%; /* Garante que o figure ocupe toda a altura do card */
+    height: 100%;
 }
 
 .prices figure {
-    margin: 0; /* Remove a margem padrão do figure para não quebrar o layout */
+    margin: 0; 
     display: flex;
     flex-direction: column;
-    height: 100%; /* Garante que o figure ocupe toda a altura do card */
+    height: 100%; 
 }
 
 .prices h2 {
@@ -146,7 +143,7 @@ footer {
 }
 
 
-/* Estilo para o link do WhatsApp flutuante */
+
 .whatsapp-float {
     position: fixed;
     bottom: 20px;
@@ -157,64 +154,63 @@ footer {
     cursor: pointer;
 }
 
-/* Container principal do ícone e texto */
+
 .icon-container {
     display: flex;
     align-items: center;
-    background-color: #25D366; /* Cor verde do WhatsApp */
+    background-color: #25D366;
     border-radius: 50px;
     padding: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transition: all 0.4s ease; /* Transição suave para todas as propriedades */
-    overflow: hidden; /* Esconde o texto que está fora do container */
-    width: 60px; /* Largura inicial, apenas para o ícone */
+    transition: all 0.4s ease; 
+    overflow: hidden; 
+    width: 60px; 
 }
 
-/* Ícone do WhatsApp */
+
 .icon-container i {
     font-size: 30px;
-    min-width: 40px; /* Garante que o ícone tenha um tamanho mínimo */
+    min-width: 40px; 
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-/* Container do texto */
+
 .text-container {
-    white-space: nowrap; /* Impede que o texto quebre a linha */
-    opacity: 0; /* Esconde o texto por padrão */
-    max-width: 0; /* Largura inicial do texto é zero */
+    white-space: nowrap; 
+    opacity: 0; 
+    max-width: 0; 
     margin-left: 0;
     transition: all 0.4s ease;
 }
 
-/* Efeito ao passar o mouse sobre o container */
+
 .whatsapp-float:hover .icon-container {
-    width: auto; /* A largura se expande para acomodar o conteúdo */
+    width: auto; 
     padding: 10px 20px;
 }
 
-/* Efeito ao passar o mouse sobre o texto */
+
 .whatsapp-float:hover .text-container {
-    opacity: 1; /* Torna o texto visível */
-    max-width: 200px; /* Defina uma largura máxima para o texto */
-    margin-left: 10px; /* Adiciona um espaço entre o ícone e o texto */
+    opacity: 1; 
+    max-width: 200px; 
+    margin-left: 10px; 
 }
 
 
 
 @media (max-width: 768px) {
     header {
-        justify-content: space-between; /* Alinha título à esquerda e botão à direita */
+        justify-content: space-between; 
         padding: 1rem 1.5rem;
     }
 
 
     .hamButton {
-        display: flex; /* Mostra o botão hambúrguer */
+        display: flex; 
     }
 
-    /* Animação do ícone do hambúrguer para virar um 'X' */
     .hamButton.active .bar:nth-child(1) {
         transform: translateY(8px) rotate(45deg);
     }
@@ -226,17 +222,17 @@ footer {
     }
 
     nav {
-        display: none; /* Esconde o menu por padrão */
+        display: none; 
         position: absolute;
         top: 100%;
         left: 0;
         width: 100%;
-        background-color: rgba(11, 148, 68, 0.97); /* Verde do siteplan com transparência */
+        background-color: rgba(11, 148, 68, 0.97); 
         box-shadow: 0 8px 16px rgba(0,0,0,0.2);
         z-index: 1000;
     }
 
-    /* A classe .active será adicionada via JavaScript */
+    
     nav.active {
         display: block;
     }
@@ -263,14 +259,14 @@ footer {
         padding: 1rem;
     }
 
-    /* Ajusta o container principal em telas menores */
+    
     main {
         padding: 1.5rem 1rem;
         gap: 1.5rem;
     }
 
     .prices {
-        flex: 1 1 100%; /* Cada card ocupa a largura total */
+        flex: 1 1 100%; 
         max-width: 100%;
     }
 }
